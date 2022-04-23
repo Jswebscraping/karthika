@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{
+            font-family: sans-serif;
+            font-size: 30px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 100px auto;
+        }
+        form{text-align: center;}
+        input{padding:12px;}
+        #result{
+            font-size: 22px;
+            font-family: calibri;
+            color:green;
+            text-align: center;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Generate Fibonacci series of a number</h1>
+    <form id="form">
+        <input type="number" name="" id="number"><br>
+        <input type="submit" value="check">
+    </form>
+    <p id="result"></p>
+    <script>
+        var frm=document.getElementById("form");
+        frm.onsubmit=function(){
+            var num = document.getElementById("number").value;
+            var result=document.getElementById("result");
+            var n1=0,n2=1,n3,i;
+            document.write("Fibonacci Series");
+            for(i=1;i<=num;i++)
+            {
+            document.write("<br>"+n1);
+            n3 = n1+n2
+            n1=n2;
+            n2=n3;
+            result.innerHTML=n1;
+            
+            }
+        }
+
+    </script>
+</body>
+</html>
+  
